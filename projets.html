@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets | Portfolio [Votre Nom]</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="Logo">
+        <span>[Votre Nom]</span>
+      </div>
+      <div class="menu" id="menu">
+        <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+        <a href="apropos.html"><i class="fas fa-user"></i> À propos</a>
+        <a href="competences.html"><i class="fas fa-code"></i> Compétences</a>
+        <a href="projets.html" class="active"><i class="fas fa-briefcase"></i> Projets</a>
+        <a href="contact.html" class="btn"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Mes Projets</h1>
+      <p>Découvrez mes réalisations et travaux</p>
+    </div>
+  </header>
+
+  <!-- Filtres de projets -->
+  <section class="section light">
+    <div class="container">
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="web">Développement Web</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Projets -->
+  <section class="section">
+    <div class="container">
+      <!-- Projet 1: Dhac Academia -->
+      <div class="project-detail" id="dhac">
+        <div class="grid grid-2">
+          <div class="project-showcase">
+            <div class="project-image-main">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Dhac Academia">
+            </div>
+            <div class="project-images">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Écran 1">
+              <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd" alt="Écran 2">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Écran 3">
+            </div>
+          </div>
+          
+          <div class="project-info">
+            <h2>Dhac Academia</h2>
+            <p class="project-category">Développement Web • Design • JavaScript</p>
+            
+            <div class="project-description">
+              <h3>Description du projet</h3>
+              <p>Plateforme de formation en ligne développée dans le cadre de mon apprentissage en développement web. Le site propose diverses formations dans le domaine numérique.</p>
+              
+              <h3>Fonctionnalités</h3>
+              <ul class="project-features">
+                <li><i class="fas fa-check"></i> Design responsive et moderne</li>
+                <li><i class="fas fa-check"></i> Formulaire de contact avec validation</li>
+                <li><i class="fas fa-check"></i> Navigation fluide entre les sections</li>
+                <li><i class="fas fa-check"></i> Présentation des formations avec cartes interactives</li>
+              </ul>
+              
+              <h3>Technologies utilisées</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Flexbox</span>
+                <span class="tech-tag">Grid</span>
+              </div>
+              
+              <div class="project-links">
+                <a href="https://github.com/votrecompte/dhac-academia" class="btn" target="_blank">
+                  <i class="fab fa-github"></i> Code Source
+                </a>
+                <a href="#" class="btn btn-secondary" onclick="openDemo('dhac-demo')">
+                  <i class="fas fa-eye"></i> Voir la démo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Autres projets -->
+  <section class="section light">
+    <div class="container">
+      <h2 class="section-title">Autres Projets</h2>
+      
+      <div class="grid grid-3">
+        <!-- Projet Portfolio -->
+        <div class="project-card" data-category="web javascript">
+          <div class="project-card-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Portfolio">
+          </div>
+          <div class="project-card-content">
+            <h3>Portfolio Personnel</h3>
+            <p>Site portfolio responsive avec animations et formulaire de contact interactif.</p>
+            <div class="project-card-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
+            </div>
+            <a href="#portfolio-detail" class="btn-small">Voir les détails</a>
+          </div>
+        </div>
+        
+        <!-- Projet E-commerce -->
+        <div class="project-card" data-category="web design">
+          <div class="project-card-image">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" alt="E-commerce">
+          </div>
+          <div class="project-card-content">
+            <h3>Boutique en ligne</h3>
+            <p>Site e-commerce avec panier d'achat et système de paiement simulé.</p>
+            <div class="project-card-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
+            </div>
+            <a href="#ecommerce-detail" class="btn-small">Voir les détails</a>
+          </div>
+        </div>
+        
+        <!-- Projet Application -->
+        <div class="project-card" data-category="javascript">
+          <div class="project-card-image">
+            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3" alt="Application">
+          </div>
+          <div class="project-card-content">
+            <h3>Task Manager App</h3>
+            <p>Application de gestion de tâches avec localStorage et filtres.</p>
+            <div class="project-card-tech">
+              <span>JavaScript</span>
+              <span>LocalStorage</span>
+              <span>CSS</span>
+            </div>
+            <a href="#taskmanager-detail" class="btn-small">Voir les détails</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal pour démo -->
+  <div class="modal" id="dhac-demo">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Démo Dhac Academia</h3>
+      <div class="modal-body">
+        <!-- Insérez votre code Dhac Academia ici -->
+        <iframe src="dhac-demo.html" width="100%" height="500px"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- Copiez le footer de index.html ici -->
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

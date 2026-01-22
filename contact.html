@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Portfolio AWANDJA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/3.png" alt="Logo">
+        <span>AWANDJA</span>
+      </div>
+      <div class="menu" id="menu">
+        <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+        <a href="apropos.html"><i class="fas fa-user"></i> À propos</a>
+        <a href="competences.html"><i class="fas fa-code"></i> Compétences</a>
+        <a href="#"><i class="fas fa-briefcase"></i> Projets</a>
+        <a href="contact.html" class="active btn"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Contactez-moi</h1>
+      <p>Discutons de votre prochain projet</p>
+    </div>
+  </header>
+
+  <!-- Section Contact -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <!-- Informations de contact -->
+        <div class="contact-info">
+          <h2>Travaillons ensemble</h2>
+          <p class="contact-description">
+            Vous avez un projet en tête ? N'hésitez pas à me contacter. Je serais ravi d'échanger avec vous sur vos idées et de vous aider à les concrétiser.
+          </p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h3>Email</h3>
+                <p>awandjaalbert@gmail.com</p>
+                <small>Réponse immédiate</small>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h3>Téléphone</h3>
+                <p>+243 828 143 831</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h3>Localisation</h3>
+                <p>Kinshasa, RDC</p>
+                <small>Disponible pour travail à distance</small>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-contact">
+            <h3>Suivez-moi</h3>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-codepen"></i>
+                <span>CodePen</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Formulaire de contact -->
+        <div class="contact-form-container">
+          <h2>Envoyez un message</h2>
+          
+          <form id="contactForm" class="contact-form">
+            <div id="formMessage" class="form-message"></div>
+            
+            <div class="form-group">
+              <label for="name">Nom complet *</label>
+              <input type="text" id="name" name="name" required>
+              <div class="error-message" id="nameError"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+              <div class="error-message" id="emailError"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Sujet *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Sélectionnez un sujet</option>
+                <option value="projet">Demande de projet</option>
+                <option value="devis">Demande de devis</option>
+                <option value="collaboration">Proposition de collaboration</option>
+                <option value="information">Demande d'information</option>
+                <option value="autre">Autre</option>
+              </select>
+              <div class="error-message" id="subjectError"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <div class="error-message" id="messageError"></div>
+            </div>
+            
+            <div class="form-group checkbox">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <label for="newsletter">S'abonner à la newsletter (optionnel)</label>
+            </div>
+            
+            <button type="submit" class="btn btn-submit">
+              <i class="fas fa-paper-plane"></i> Envoyer le message
+            </button>
+            
+            <div class="form-info">
+              <small><i class="fas fa-info-circle"></i> Les champs marqués d'un * sont obligatoires</small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section FAQ -->
+  <section class="section light">
+    <div class="container">
+      <h2 class="section-title">Questions Fréquentes</h2>
+      
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quels types de projets acceptez-vous ?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Je travaille sur des projets de développement web incluant sites vitrines, portfolios, applications web simples, et intégrations de designs. J'accepte également les missions de refonte de sites existants.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quel est votre délai de réponse ?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Je m'efforce de répondre à toutes les demandes dans un délai de 24 heures ouvrées. Pour les demandes urgentes, merci de le préciser dans votre message.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Proposez-vous des consultations gratuites ?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, je propose une première consultation gratuite de 30 minutes pour discuter de votre projet, comprendre vos besoins et vous proposer des solutions adaptées.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Prêt à démarrer votre projet ?</h2>
+        <p>Contactez-moi dès aujourd'hui pour discuter de vos idées.</p>
+        <a href="tel:+33123456789" class="btn btn-large">
+          <i class="fas fa-phone"></i> Appelez-moi maintenant
+        </a>
+      </div>
+    </div>
+  </section>
+
+   <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4">
+        <div>
+          <div class="logo">
+            <img src="images/1.jpg" alt="Logo">
+            <span>AWANDJA ALBERT</span>
+          </div>
+          <p class="footer-text">Développeur web passionné créant des expériences digitales mémorables.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"> <i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-codepen"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="#">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Développement Web</a></li>
+            <li><a href="#">Design Responsive</a></li>
+            <li><a href="#">Optimisation SEO</a></li>
+            <li><a href="#">Maintenance</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3>Contact</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> awandjaalbert@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +243 828 143 831</li>
+            <li><i class="fas fa-map-marker-alt"></i> Kinshasa, RDC</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 AWANDJA ALBERT. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
