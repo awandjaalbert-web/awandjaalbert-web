@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHAC ACADEMIA - Formation et Développement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <div class="logo">D</div>
+                <div class="logo-text">DHAC <span>ACADEMIA</span></div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#formations">Formations</a></li>
+                    <li class="dropdown">
+                        <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#service1">Consulting</a>
+                            <a href="#service2">Formation sur mesure</a>
+                            <a href="#service3">Accompagnement</a>
+                            <a href="#service4">Certification</a>
+                        </div>
+                    </li>
+                    <li><a href="#apropos">À-propos</a></li>
+                    <li><a href="#" id="inscriptionBtn">Inscrire</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero">
+        <div class="carousel">
+            <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                <div class="carousel-content">
+                    <h1>Formations Professionnelles de Qualité</h1>
+                    <p>Développez vos compétences avec nos programmes conçus par des experts. Rejoignez des centaines d'apprenants satisfaits.</p>
+                    <a href="#formations" class="cta-button">Découvrir nos formations</a>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');">
+                <div class="carousel-content">
+                    <h1>Apprentissage Pratique et Innovant</h1>
+                    <p>Notre pédagogie est basée sur la pratique et l'innovation pour garantir votre réussite professionnelle.</p>
+                    <a href="#contact" class="cta-button">Nous contacter</a>
+                </div>
+            </div>
+            
+            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                <div class="carousel-content">
+                    <h1>Certifications Reconnues</h1>
+                    <p>Obtenez des certifications valorisées sur le marché de l'emploi grâce à nos programmes accrédités.</p>
+                    <a href="#inscription" class="cta-button" id="ctaInscription">S'inscrire maintenant</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-dots">
+            <div class="dot active" data-slide="0"></div>
+            <div class="dot" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+        </div>
+    </section>
+
+    <!-- Section Formations -->
+    <section class="formations-section" id="formations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Formations</h2>
+                <p>Découvrez nos programmes de formation conçus pour répondre aux besoins du marché actuel et vous préparer aux métiers d'avenir.</p>
+            </div>
+            
+            <div class="formations-grid">
+                <div class="formation-card">
+                    <div class="formation-img" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="formation-content">
+                        <h3>Développement Web Fullstack</h3>
+                        <p>Maîtrisez les technologies frontend et backend pour créer des applications web modernes.</p>
+                        <a href="#" class="formation-link">Voir le programme <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="formation-card">
+                    <div class="formation-img" style="background-image: url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="formation-content">
+                        <h3>Excel & Power Query</h3>
+                        <p>Apprenez à extraire, traiter et analyser des données pour en tirer des insights actionnables.</p>
+                        <a href="#" class="formation-link">Voir le programme <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="formation-card">
+                    <div class="formation-img" style="background-image: url('https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&auto=format&fit=crop&w=2106&q=80');"></div>
+                    <div class="formation-content">
+                        <h3>Marketing Digital</h3>
+                        <p>Développez des stratégies digitales efficaces pour augmenter la visibilité en ligne.</p>
+                        <a href="#" class="formation-link">Voir le programme <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="formation-card">
+                    <div class="formation-img" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="formation-content">
+                        <h3>Design UX/UI</h3>
+                        <p>Créez des interfaces utilisateur intuitives et des expériences engageantes.</p>
+                        <a href="#" class="formation-link">Voir le programme <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="formation-card">
+                    <div class="formation-img" style="background-image: url('https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2056&q=80');"></div>
+                    <div class="formation-content">
+                        <h3>Cybersécurité</h3>
+                        <p>Apprenez à protéger les systèmes informatiques contre les menaces et attaques.</p>
+                        <a href="#" class="formation-link">Voir le programme <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-nous</h2>
+                <p>N'hésitez pas à nous contacter pour plus d'informations sur nos formations et services.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Restons en contact</h3>
+                    <p>Notre équipe est à votre disposition pour répondre à toutes vos questions. Nous vous répondrons dans les plus brefs délais.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>awandjaalbert@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <p>+243 977 084 826</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>AV. Nyangwe, N° 269, Ligwala/Kinshasa-RDC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal d'Inscription -->
+    <div class="modal-overlay" id="inscriptionModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2>Inscription à une formation</h2>
+            
+            <form id="inscriptionForm">
+                <div class="form-group">
+                    <label for="inscriptionName">Nom complet</label>
+                    <input type="text" id="inscriptionName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="inscriptionEmail">Email</label>
+                    <input type="email" id="inscriptionEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="inscriptionPhone">Téléphone</label>
+                    <input type="tel" id="inscriptionPhone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="formationSelect">Formation souhaitée</label>
+                    <select id="formationSelect" required>
+                        <option value="">Sélectionnez une formation</option>
+                        <option value="developpement-web">Développement Web Fullstack</option>
+                        <option value="data-science">Data Science & Analyse</option>
+                        <option value="marketing-digital">Marketing Digital</option>
+                        <option value="gestion-projet">Gestion de Projet Agile</option>
+                        <option value="design-uxui">Design UX/UI</option>
+                        <option value="cybersecurite">Cybersécurité</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="inscriptionMessage">Message (optionnel)</label>
+                    <textarea id="inscriptionMessage" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">S'inscrire maintenant</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">DHAC <span>ACADEMIA</span></div>
+                    <p>DHAC ACADEMIA est un centre de formation d'excellence qui accompagne les apprenants dans l'acquisition de compétences pratiques et recherchées sur le marché du travail.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#formations">Formations</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 DHAC ACADEMIA. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
