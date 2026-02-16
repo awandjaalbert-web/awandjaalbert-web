@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets · IT & Web · Portfolio</title>
+    <!-- Font Awesome 6 (gratuit) pour les icônes techniques -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts : Inter (moderne, professionnel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f6f9fc;
+            font-family: 'Inter', sans-serif;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* header de la page "Projets" */
+        .page-header {
+            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1.5rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(145deg, #0f2b3d, #1e4b6e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .page-header .subhead {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #4b5a6b;
+            max-width: 500px;
+            border-left: 4px solid #2b7a9c;
+            padding-left: 1.2rem;
+            background: rgba(43, 122, 156, 0.04);
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* filtre / stats simple */
+        .projet-stats {
+            display: flex;
+            gap: 1.8rem;
+            background: white;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            box-shadow: 0 5px 15px rgba(0,20,30,0.05);
+            border: 1px solid #e2eef5;
+            font-weight: 500;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #264e6b;
+        }
+
+        .stat-item i {
+            font-size: 1.1rem;
+            color: #2b7a9c;
+        }
+
+        /* grille principale des projets */
+        .projets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem 1.8rem;
+            margin: 2.5rem 0 4rem;
+        }
+
+        /* carte projet */
+        .projet-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 12px 30px -8px rgba(20, 45, 70, 0.1), 0 4px 8px rgba(0,0,0,0.02);
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #eaf1f8;
+            backdrop-filter: blur(2px);
+            height: 100%;
+        }
+
+        .projet-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 35px -12px rgba(15, 50, 75, 0.15);
+            border-color: #bdd9ec;
+        }
+
+        .card-image {
+            height: 180px;
+            background: linear-gradient(135deg, #e0edf5, #ccdeec);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #18475c;
+            font-size: 3.5rem;
+            border-bottom: 1px solid #d3e3f0;
+            transition: background 0.2s;
+        }
+
+        /* icône ou placeholder image */
+        .card-image i {
+            filter: drop-shadow(2px 4px 8px rgba(28, 79, 110, 0.3));
+        }
+
+        .projet-card:nth-child(odd) .card-image {
+            background: linear-gradient(145deg, #daeaf5, #c5ddec);
+        }
+        .projet-card:nth-child(3n) .card-image {
+            background: linear-gradient(145deg, #d1e2f0, #bbd2e6);
+        }
+
+        .card-content {
+            padding: 1.5rem 1.5rem 1.8rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .projet-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: #0b2a3b;
+            letter-spacing: -0.01em;
+        }
+
+        .projet-short-desc {
+            font-size: 0.95rem;
+            color: #446a82;
+            margin-bottom: 1.3rem;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        /* tech tags */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.7rem;
+            margin: 0.8rem 0 1.2rem;
+        }
+
+        .tech-tag {
+            background: #ecf3fa;
+            color: #1b5470;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            letter-spacing: 0.01em;
+            text-transform: lowercase;
+            border: 1px solid #cde0ed;
+            transition: all 0.1s;
+        }
+
+        .tech-tag::before {
+            content: '#';
+            opacity: 0.7;
+            font-weight: 400;
+            margin-right: 2px;
+        }
+
+        .tech-tag:hover {
+            background: #d6e6f5;
+            border-color: #87b9da;
+        }
+
+        /* métaligne (année / role) */
+        .projet-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            border-top: 1px dashed #c7ddec;
+            padding-top: 1rem;
+            font-size: 0.9rem;
+            color: #3d6077;
+        }
+
+        .projet-year {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: #e5f0f7;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+
+        .projet-year i {
+            font-size: 0.75rem;
+            color: #1d7092;
+        }
+
+        .projet-role {
+            background: white;
+            border: 1px solid #b6d2e8;
+            padding: 0.25rem 1.1rem;
+            border-radius: 40px;
+            font-weight: 500;
+            color: #1a5777;
+            font-size: 0.8rem;
+        }
+
+        /* call to action voir plus */
+        .card-footer-link {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-detail {
+            background: none;
+            border: none;
+            color: #1d5f84;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: default; /* pas de lien réel, mise en page seulement */
+            text-decoration: none;
+            padding: 0.2rem 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.15s;
+        }
+
+        .btn-detail i {
+            font-size: 0.8rem;
+            transition: transform 0.15s;
+        }
+
+        .projet-card:hover .btn-detail i {
+            transform: translateX(4px);
+        }
+
+        /* section archives ou autres projets (footer de la page) */
+        .other-projects {
+            margin-top: 3rem;
+            background: white;
+            border-radius: 40px;
+            padding: 2rem 2.2rem;
+            border: 1px solid #cde0ec;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .other-projects h3 {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #153e54;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .other-badges {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .other-badge-item {
+            background: #f3f9ff;
+            border-radius: 50px;
+            padding: 0.6rem 1.5rem;
+            font-weight: 500;
+            color: #194a63;
+            border: 1px solid #c3ddee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .other-badge-item i {
+            color: #2b7a9c;
+        }
+
+        /* footer crédit */
+        .page-footer-note {
+            margin-top: 5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5e7e95;
+            border-top: 1px solid #cfe0ed;
+            padding-top: 2rem;
+        }
+
+        /* adaptation mobile */
+        @media (max-width: 600px) {
+            body { padding: 1.2rem; }
+            .page-header h1 { font-size: 2.2rem; }
+            .projet-stats { padding: 0.6rem 1.2rem; gap: 1rem; }
+            .other-projects { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- En-tête de la page "projets" -->
+    <div class="page-header">
+        <div>
+            <h1>📁 Projets & réalisations</h1>
+            <div class="subhead">
+                IT · Web · Architecture · Design — un aperçu synthétique de mes travaux professionnels.
+            </div>
+        </div>
+        <div class="projet-stats">
+            <span class="stat-item"><i class="fa-regular fa-folder-open"></i> 12 projets</span>
+            <span class="stat-item"><i class="fa-regular fa-calendar"></i> 2022–2025</span>
+            <span class="stat-item"><i class="fa-regular fa-star"></i> 8 technos</span>
+        </div>
+    </div>
+
+    <!-- Grille de projets (exemples fictifs mais réalistes) -->
+    <div class="projets-grid">
+        <!-- Carte 1 -->
+        <div class="projet-card">
+            <div class="card-image">
+                <i class="fas fa-cloud-sun fa-4x"></i>
+            </div>
+            <div class="card-content">
+                <h2 class="projet-title">Dashboard IoT • SmartGrid</h2>
+                <div class="projet-short-desc">Visualisation temps réel de capteurs industriels avec alertes prédictives.</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">D3</span>
+                </div>
+                <div class="projet-meta">
+                    <span class="projet-year"><i class="fa-regular fa-calendar"></i> 2024</span>
+                    <span class="projet-role">Fullstack · lead</span>
+                </div>
+                <div class="card-footer-link">
+                    <span class="btn-detail">Détail du projet <i class="fa-regular fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="projet-card">
+            <div class="card-image">
+                <i class="fas fa-cart-shopping fa-4x"></i>
+            </div>
+            <div class="card-content">
+                <h2 class="projet-title">Marketplace KONNECT</h2>
+                <div class="projet-short-desc">Plateforme e‑commerce headless avec microservices et paiement Stripe.</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">GraphQL</span>
+                    <span class="tech-tag">Strapi</span>
+                    <span class="tech-tag">Docker</span>
+                </div>
+                <div class="projet-meta">
+                    <span class="projet-year"><i class="fa-regular fa-calendar"></i> 2023-24</span>
+                    <span class="projet-role">Architecte back</span>
+                </div>
+                <div class="card-footer-link">
+                    <span class="btn-detail">Détail du projet <i class="fa-regular fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="projet-card">
+            <div class="card-image">
+                <i class="fas fa-brain fa-4x"></i>
+            </div>
+            <div class="card-content">
+                <h2 class="projet-title">IA • Classification documents</h2>
+                <div class="projet-short-desc">Pipeline NLP pour classer automatiquement des rapports d'activité (Python, spaCy).</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">spaCy</span>
+                    <span class="tech-tag">Elastic</span>
+                </div>
+                <div class="projet-meta">
+                    <span class="projet-year"><i class="fa-regular fa-calendar"></i> 2025</span>
+                    <span class="projet-role">ML engineer</span>
+                </div>
+                <div class="card-footer-link">
+                    <span class="btn-detail">Détail du projet <i class="fa-regular fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="projet-card">
+            <div class="card-image">
+                <i class="fas fa-video fa-4x"></i>
+            </div>
+            <div class="card-content">
+                <h2 class="projet-title">Meet & Board (visio)</h2>
+                <div class="projet-short-desc">Application de réunion avec tableau blanc collaboratif et chat chiffré.</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">WebRTC</span>
+                    <span class="tech-tag">Vue 3</span>
+                    <span class="tech-tag">Node</span>
+                    <span class="tech-tag">Socket.io</span>
+                </div>
+                <div class="projet-meta">
+                    <span class="projet-year"><i class="fa-regular fa-calendar"></i> 2024</span>
+                    <span class="projet-role">Fullstack</span>
+                </div>
+                <div class="card-footer-link">
+                    <span class="btn-detail">Détail du projet <i class="fa-regular fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 5 -->
+        <div class="projet-card">
+            <div class="card-image">
+                <i class="fas fa-mobile-screen-button fa-4x"></i>
+            </div>
+            <div class="card-content">
+                <h2 class="projet-title">Suivi Colis • mobile</h2>
+                <div class="projet-short-desc">Application React Native + notifications push pour transporteurs.</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Expo</span>
+                    <span class="tech-tag">Firebase</span>
+                </div>
+                <div class="projet-meta">
+                    <span class="projet-year"><i class="fa-regular fa-calendar"></i> 2023</span>
+                    <span class="projet-role">Mobile lead</span>
+                </div>
+                <div class="card-footer-link">
+                    <span class="btn-detail">Détail du projet <i class="fa-regular fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 6 -->
+        <div class="projet-card">
+            <div class="card-image">
+                <i class="fas fa-database fa-4x"></i>
+            </div>
+            <div class="card-content">
+                <h2 class="projet-title">Data Warehouse • ETL</h2>
+                <div class="projet-short-desc">Migration et automatisation de flux de données entre ERP et datalake.</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Airflow</span>
+                    <span class="tech-tag">Spark</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Terraform</span>
+                </div>
+                <div class="projet-meta">
+                    <span class="projet-year"><i class="fa-regular fa-calendar"></i> 2024-25</span>
+                    <span class="projet-role">Data engineer</span>
+                </div>
+                <div class="card-footer-link">
+                    <span class="btn-detail">Détail du projet <i class="fa-regular fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section projets supplémentaires / catégories -->
+    <div class="other-projects">
+        <h3>
+            <i class="fa-regular fa-rectangle-list" style="color:#1f6f94;"></i>
+            Autres domaines & contributions
+        </h3>
+        <div class="other-badges">
+            <span class="other-badge-item"><i class="fa-regular fa-lock"></i> Auth & SSO</span>
+            <span class="other-badge-item"><i class="fa-regular fa-chart-line"></i> Analytics dashboard</span>
+            <span class="other-badge-item"><i class="fa-regular fa-pen-to-square"></i> UX research</span>
+            <span class="other-badge-item"><i class="fa-regular fa-comments"></i> API design</span>
+        </div>
+    </div>
+
+    <!-- Petit texte + invitation (prise de contact implicite) -->
+    <div class="page-footer-note">
+        <p>
+            <i class="fa-regular fa-copyright" style="margin-right: 6px;"></i> 2025 · Portfolio projets IT — chaque réalisation inclut une étude détaillée, des schémas d'architecture et des retours d'expérience. 
+            <span style="display: inline-block; background: #e1f0fa; border-radius: 30px; padding: 0.2rem 1.2rem; margin-left: 1rem; font-weight: 500;">
+                <i class="fa-regular fa-envelope"></i> contact@projets.dev
+            </span>
+        </p>
+    </div>
+</div>
+
+<!-- Aucun lien actif, purement statique pour la maquette. 
+     Vous pouvez remplacer les textes, icônes, années et tags par vos propres projets. 
+     Le design est pensé pour être professionnel, épuré et facilement réutilisable. -->
+</body>
+</html>
